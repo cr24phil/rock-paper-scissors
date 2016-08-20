@@ -30,43 +30,53 @@ if (computerChoice < 0.33) {
 // Start by declaring a function called compare, that takes two
 // parameters: personChoice and robotChoice.
 
-
 // In a game like this, we must think about all the possible outcomes.
 // Inside the function, we are going to write an if/else statement,
 // with if/else statements inside of it. 
 
-// Let's start with the first one: What if the userChoice equals the computerChoice?
-// Now let's consider the other outcomes.
-
-// Make this game better by adding a secret cheat code. If a user types in "bomb"
-// as their choice, then make sure they win, no matter what.
-
 function compare (personChoice, robotChoice) {
+
+  // Make this game better by adding a secret cheat code.
+  // If a user types in 'bomb' as their choice, then make
+  // sure they win, no matter what.
+
   if (personChoice === 'bomb') {
     console.log('Bomb always wins!');
   }
+  
+  // What if the userChoice equals the computerChoice?
+  
   else if (personChoice === robotChoice) {
     console.log('The result is a tie!');
   }
+
+  // What if the userChoice equals 'rocks'?
+
   else if (personChoice === 'rock') {
-  	if (robotChoice === 'scissors') {
-    	console.log('Rock wins!');
-  	} else if (robotChoice === 'paper') {
-    	console.log('Paper wins!');
-  	}
-  }
-	else if (personChoice === 'paper') {
-  	if (robotChoice === 'rock') {
-    	console.log('Paper wins!');
-  	} else if (robotChoice === 'scissors') {
-    	console.log('Scissors wins!');
+    if (robotChoice === 'scissors') {
+      console.log('Rock wins!');
+    } else if (robotChoice === 'paper') {
+      console.log('Paper wins!');
     }
   }
+
+  // What if the userChoice equals 'paper'?
+
+  else if (personChoice === 'paper') {
+    if (robotChoice === 'rock') {
+      console.log('Paper wins!');
+    } else if (robotChoice === 'scissors') {
+      console.log('Scissors wins!');
+    }
+  }
+  
+  // What if the userChoice equals 'scissors'?
+
   else if (personChoice === 'scissors') {
-  	if (robotChoice === 'rock') {
-    	console.log('Rock wins!');
-  	} else if (robotChoice === 'paper') {
-    	console.log('Scissors wins!');
+    if (robotChoice === 'rock') {
+      console.log('Rock wins!');
+    } else if (robotChoice === 'paper') {
+      console.log('Scissors wins!');
     }
   }
 }
